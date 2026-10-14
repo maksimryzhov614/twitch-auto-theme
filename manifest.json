@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Twitch System Theme",
+  "version": "1.0.0",
+  "description": "Тема Twitch автоматически следует тёмной или светлой теме системы.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitch.tv/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
+}
