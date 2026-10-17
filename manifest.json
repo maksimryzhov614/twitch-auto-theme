@@ -1,12 +1,17 @@
 {
   "manifest_version": 3,
-  "name": "Twitch System Theme",
-  "version": "1.0.0",
-  "description": "Тема Twitch автоматически следует тёмной или светлой теме системы.",
+  "name": "Twitch Auto Theme",
+  "version": "1.1.1",
+  "description": "Тема Twitch следует системной: светлая днём, тёмная ночью. В режиме кинотеатра — всегда тёмная.",
   "content_scripts": [
     {
-      "matches": ["*://*.twitch.tv/*"],
-      "js": ["content.js"],
+      "matches": [
+        "*://twitch.tv/*",
+        "*://www.twitch.tv/*",
+        "*://m.twitch.tv/*",
+        "*://clips.twitch.tv/*"
+      ],
+      "js": ["vars.js", "content.js"],
       "run_at": "document_start",
       "all_frames": false
     }
